@@ -1,0 +1,33 @@
+AddOptionMenu "OptionsMenu"
+{
+    Submenu "Invisibility Options", "IVOptions"
+}
+
+OptionMenu "IVOptions"
+{
+    Title "Invisibility Options"
+
+    StaticText "-- Controls --"
+    Control "Activate Invisibility", "invisibility_activate"
+    StaticText " "
+
+    StaticText "-- System --"
+    Slider "Invisibility Duration (sec)", "iv_duration", 5, 120, 5
+    Slider "Energy Regeneration Speed", "iv_regen_speed", 0, 35, 1
+    Option "Monster Decoy Logic", "iv_lure_enable", "OnOff"
+    StaticText " "
+
+    StaticText "-- HUD --"
+    Option "Show Invisibility HUD", "iv_show_hud", "OnOff"
+    Slider "Counter Horizontal Offset", "iv_counter_horizontal_offset", 0, 100, 1
+    Slider "Counter Vertical Offset", "iv_counter_vertical_offset", 0, 100, 1
+    Slider "Counter Scale (%)", "iv_counter_scale", 50, 250, 5
+    StaticText " "
+
+    StaticText "-- Shaders --"
+    Option "Enable Stealth Shader", "iv_shader_stealth_enable", "OnOff"
+    Option "Enable Blur Shader", "iv_shader_blur_enable", "OnOff"
+    StaticText " "
+
+    SafeCommand "Reset Invisibility Settings", "resetcvar iv_duration; resetcvar iv_regen_speed; resetcvar iv_lure_enable; resetcvar iv_show_hud; resetcvar iv_counter_horizontal_offset; resetcvar iv_counter_vertical_offset; resetcvar iv_counter_scale; resetcvar iv_shader_stealth_enable; resetcvar iv_shader_blur_enable"
+}

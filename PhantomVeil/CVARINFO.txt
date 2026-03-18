@@ -1,0 +1,11 @@
+server int iv_duration = 15;
+server int iv_regen_speed = 6;
+server bool iv_lure_enable = true;
+
+user bool iv_show_hud = true;
+user int iv_counter_horizontal_offset = 95;
+user int iv_counter_vertical_offset = 10;
+user int iv_counter_scale = 100;
+
+user bool iv_shader_stealth_enable = true;
+user bool iv_shader_blur_enable = true;

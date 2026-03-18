@@ -1,0 +1,16 @@
+HardwareShader PostProcess Scene
+{
+    Name "ivshader"
+    Shader "shaders/ivshader.fp" 330
+    Uniform int ivEffectCounter
+    Uniform int ivActive
+}
+
+HardwareShader PostProcess beforebloom
+{
+    Name "ivloop"
+    Shader "shaders/ivloop.fp" 330
+    Uniform vec2 steps
+    Uniform int samples
+    Uniform float increment
+}

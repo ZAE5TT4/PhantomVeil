@@ -1,0 +1,5 @@
+addkeysection "Invisibility Mod" InvisibilityActions
+
+addmenukey "Activate Invisibility" invisibility_activate
+alias invisibility_activate "netevent inv_activate"
+defaultbind i invisibility_activate
